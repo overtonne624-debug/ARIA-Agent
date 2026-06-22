@@ -36,6 +36,4 @@ Give a professional data science answer.
 Explain reasoning clearly.
 """
 
-    response = model.generate_content(prompt)
-
-    return response.text
+    return "Question answering temporarily disabled."

@@ -2,7 +2,9 @@ import json
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, UploadFile, File
+from fastapi.staticfiles import StaticFiles
 from fastapi.encoders import jsonable_encoder
+from fastapi.middleware.cors import CORSMiddleware
 
 from agents.memory_agent import store_memory, retrieve_memory
 from agents.narrative_agent import generate_narrative
@@ -22,6 +24,18 @@ app = FastAPI(
     title="ARIA API",
     description="Autonomous Research & Intelligence Agent",
     version="1.0.0"
+)
+app.mount(
+    "/reports",
+    StaticFiles(directory="reports"),
+    name="reports"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

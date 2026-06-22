@@ -72,21 +72,31 @@ def generate_pdf(summary, analysis, chart_path):
     )
 
     content.append(Spacer(1, 12))
+    summary_text = f"""
+    Rows: {summary['rows']}
+    Columns: {summary['columns']}
+    """
 
+    analysis_text = f"""
+    Problem Type: {analysis['problem_type']}
+    Best Model: {analysis['best_model']}
+    Score: {analysis['score']}
+    """
+    
     content.append(
         Paragraph(
-            str(summary),
-            styles["BodyText"]
-        )
+    summary_text,
+    styles["BodyText"]
+)
     )
 
     content.append(Spacer(1, 12))
 
     content.append(
         Paragraph(
-            str(analysis),
-            styles["BodyText"]
-        )
+    analysis_text,
+    styles["BodyText"]
+)
     )
 
     content.append(Spacer(1, 12))

@@ -46,8 +46,6 @@ Confidence Score:
 
 Warnings:
 {', '.join(warnings) if warnings else 'None'}
-memory context:
-{past_memory}
 
 RECOMMENDATIONS
 
