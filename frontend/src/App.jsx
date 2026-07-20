@@ -46,7 +46,7 @@ setProgress(20);
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/upload", {
+      const response = await fetch("https://aria-agent-5jnn.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -427,7 +427,7 @@ setActivityLogs([
 <div className="download-links">
 
 <a
-  href="http://127.0.0.1:8000/reports/analysis_report.pdf"
+  href="https://aria-agent-5jnn.onrender.com/reports/analysis_report.pdf"
   target="_blank"
 >
   📄 Download PDF Report
@@ -437,7 +437,7 @@ setActivityLogs([
 <br /><br />
 
 <a
-  href="http://127.0.0.1:8000/reports/chart.png"
+  href="https://aria-agent-5jnn.onrender.com/reports/chart.png"
   target="_blank"
 >
   📈 Download Chart
@@ -446,7 +446,7 @@ setActivityLogs([
 <h3>SHAP Explainability</h3>
 
 <img
-  src={`http://127.0.0.1:8000/reports/shap_summary.png`}
+  src={`https://aria-agent-5jnn.onrender.com/reports/shap_summary.png`}
   alt="SHAP Summary"
   className="shap-image"
 />
@@ -454,7 +454,7 @@ setActivityLogs([
 <br /><br />
 
 <a
-  href="http://127.0.0.1:8000/reports/shap_summary.png"
+  href="https://aria-agent-5jnn.onrender.com/reports/shap_summary.png"
   target="_blank"
 >
   📊 Download SHAP Report
