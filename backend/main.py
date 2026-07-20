@@ -25,6 +25,10 @@ app = FastAPI(
     description="Autonomous Research & Intelligence Agent",
     version="1.0.0"
 )
+import os
+
+os.makedirs("reports", exist_ok=True)
+
 app.mount(
     "/reports",
     StaticFiles(directory="reports"),
