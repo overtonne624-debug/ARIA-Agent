@@ -52,6 +52,7 @@ setProgress(20);
       });
 
       const data = await response.json();
+      console.log("Backend Response:", data);
       setAgentStatus([
   "🟢 Data Agent - Completed",
   "🟡 Analysis Agent - Running",
