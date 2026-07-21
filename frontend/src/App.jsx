@@ -51,6 +51,8 @@ setProgress(20);
         body: formData,
       });
 
+      console.log("status:", response.status);
+      
       const data = await response.json();
       console.log("Backend Response:", data);
       setAgentStatus([
