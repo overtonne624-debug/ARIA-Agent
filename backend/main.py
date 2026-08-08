@@ -19,7 +19,7 @@ from agents.data_profiler import profile_data
 from agents.report_generator import generate_chart, generate_pdf
 from tools.data_loader import load_csv
 
-
+#CORS configuration for vercel frontend
 app = FastAPI(
     title="ARIA API",
     description="Autonomous Research & Intelligence Agent",
