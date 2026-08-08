@@ -23,117 +23,136 @@ const [activityLogs, setActivityLogs] = useState([]);
   "⚪ Report Agent - Waiting",
 ]);
 
-  const handleAnalyze = async () => {
-    const startTime = Date.now();
+const handleAnalyze = async () => {
+  if (!file) {
+    alert("Please select a CSV file");
+    return;
+  }
 
-    setLoading(true);
-    setAgentStatus([
-  "🟡 Data Agent - Running",
-  "⚪ Analysis Agent - Waiting",
-  "⚪ Explainability Agent - Waiting",
-  "⚪ Critic Agent - Waiting",
-  "⚪ Report Agent - Waiting",
-]);
-setProgress(20);
+  const startTime = Date.now();
 
-    if (!file) {
-      alert("Please select a CSV file");
-      setloading(false);
-      return;
-    }
+  setLoading(true);
+  setResult(null);
+  setProgress(10);
 
-    const formData = new FormData();
-    formData.append("file", file);
+  setAgentStatus([
+    "🟡 Data Agent - Running",
+    "⚪ Analysis Agent - Waiting",
+    "⚪ Explainability Agent - Waiting",
+    "⚪ Critic Agent - Waiting",
+    "⚪ Report Agent - Waiting",
+  ]);
 
-    try {
-      const response = await fetch("https://aria-agent-5jnn.onrender.com/upload", {
+  const formData = new FormData();
+  formData.append("file", file);
+
+  try {
+    console.log("Uploading dataset...");
+
+    const response = await fetch(
+      "https://aria-agent-5jnn.onrender.com/upload",
+      {
         method: "POST",
         body: formData,
-      });
+      }
+    );
 
-      console.log("status:", response.status);
-      
-      const data = await response.json();
-      console.log("Backend Response:", data);
-      setAgentStatus([
-  "🟢 Data Agent - Completed",
-  "🟡 Analysis Agent - Running",
-  "⚪ Explainability Agent - Waiting",
-  "⚪ Critic Agent - Waiting",
-  "⚪ Report Agent - Waiting",
-]);
-setProgress(40);
+    console.log("Backend status:", response.status);
 
-await new Promise(resolve => setTimeout(resolve, 1000));
-
-setAgentStatus([
-  "🟢 Data Agent - Completed",
-  "🟢 Analysis Agent - Completed",
-  "🟡 Explainability Agent - Running",
-  "⚪ Critic Agent - Waiting",
-  "⚪ Report Agent - Waiting",
-]);
-setProgress(60);
-
-await new Promise(resolve => setTimeout(resolve, 1000));
-
-setAgentStatus([
-  "🟢 Data Agent - Completed",
-  "🟢 Analysis Agent - Completed",
-  "🟢 Explainability Agent - Completed",
-  "🟡 Critic Agent - Running",
-  "⚪ Report Agent - Waiting",
-]);
-setProgress(80);
-
-await new Promise(resolve => setTimeout(resolve, 1000));
-
-setAgentStatus([
-  "🟢 Data Agent - Completed",
-  "🟢 Analysis Agent - Completed",
-  "🟢 Explainability Agent - Completed",
-  "🟢 Critic Agent - Completed",
-  "🟡 Report Agent - Running",
-]);
-setProgress(90);
-
-await new Promise(resolve => setTimeout(resolve, 1000));
-
-setAgentStatus([
-  "🟢 Data Agent - Completed",
-  "🟢 Analysis Agent - Completed",
-  "🟢 Explainability Agent - Completed",
-  "🟢 Critic Agent - Completed",
-  "🟢 Report Agent - Completed",
-]);
-setProgress(100);
-
-      console.log(data);
-      setResult(data);
-      const endTime = Date.now();
-
-setProcessingTime(
-  ((endTime - startTime) / 1000).toFixed(2)
-);
-
-setActivityLogs([
-  "Dataset Uploaded",
-  "Data Agent Completed",
-  "Analysis Agent Completed",
-  "SHAP Explainability Generated",
-  "Critic Agent Completed",
-  "Narrative Report Generated",
-  "PDF Report Ready"
-]);
-
-    } catch (error) {
-      console.error(error);
-      alert("Backend connection failed");
+    if (!response.ok) {
+      throw new Error(`Backend returned ${response.status}`);
     }
-    finally{
-      setLoading(false);
-    }
-  };
+
+    setProgress(40);
+
+    const data = await response.json();
+
+    console.log("Backend Response:", data);
+
+    setAgentStatus([
+      "🟢 Data Agent - Completed",
+      "🟡 Analysis Agent - Running",
+      "⚪ Explainability Agent - Waiting",
+      "⚪ Critic Agent - Waiting",
+      "⚪ Report Agent - Waiting",
+    ]);
+
+    setProgress(55);
+
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    setAgentStatus([
+      "🟢 Data Agent - Completed",
+      "🟢 Analysis Agent - Completed",
+      "🟡 Explainability Agent - Running",
+      "⚪ Critic Agent - Waiting",
+      "⚪ Report Agent - Waiting",
+    ]);
+
+    setProgress(70);
+
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    setAgentStatus([
+      "🟢 Data Agent - Completed",
+      "🟢 Analysis Agent - Completed",
+      "🟢 Explainability Agent - Completed",
+      "🟡 Critic Agent - Running",
+      "⚪ Report Agent - Waiting",
+    ]);
+
+    setProgress(85);
+
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    setAgentStatus([
+      "🟢 Data Agent - Completed",
+      "🟢 Analysis Agent - Completed",
+      "🟢 Explainability Agent - Completed",
+      "🟢 Critic Agent - Completed",
+      "🟡 Report Agent - Running",
+    ]);
+
+    setProgress(95);
+
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    setAgentStatus([
+      "🟢 Data Agent - Completed",
+      "🟢 Analysis Agent - Completed",
+      "🟢 Explainability Agent - Completed",
+      "🟢 Critic Agent - Completed",
+      "🟢 Report Agent - Completed",
+    ]);
+
+    setResult(data);
+    setProgress(100);
+
+    const endTime = Date.now();
+
+    setProcessingTime(
+      ((endTime - startTime) / 1000).toFixed(2)
+    );
+
+    setActivityLogs([
+      "Dataset Uploaded",
+      "Data Agent Completed",
+      "Analysis Agent Completed",
+      "SHAP Explainability Generated",
+      "Critic Agent Completed",
+      "Narrative Report Generated",
+      "PDF Report Ready",
+    ]);
+
+    console.log("ARIA analysis completed successfully.");
+  } catch (error) {
+    console.error("ARIA ERROR:", error);
+    alert("Analysis failed. Check the browser console.");
+    setProgress(0);
+  } finally {
+    setLoading(false);
+  }
+};
 
     return (
     <div className="App">
