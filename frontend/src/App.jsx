@@ -101,32 +101,16 @@ const handleAnalyze = async () => {
       "⚪ Report Agent - Waiting",
     ]);
 
-    setProgress(85);
-
-    await new Promise((resolve) => setTimeout(resolve, 500));
-
     setAgentStatus([
-      "🟢 Data Agent - Completed",
-      "🟢 Analysis Agent - Completed",
-      "🟢 Explainability Agent - Completed",
-      "🟢 Critic Agent - Completed",
-      "🟡 Report Agent - Running",
-    ]);
+    "🟢 Data Agent - Completed",
+    "🟢 Analysis Agent - Completed",
+    "🟢 Explainability Agent - Completed",
+    "🟢 Critic Agent - Completed",
+    "🟢 Report Agent - Completed",
+]);
 
-    setProgress(95);
-
-    await new Promise((resolve) => setTimeout(resolve, 500));
-
-    setAgentStatus([
-      "🟢 Data Agent - Completed",
-      "🟢 Analysis Agent - Completed",
-      "🟢 Explainability Agent - Completed",
-      "🟢 Critic Agent - Completed",
-      "🟢 Report Agent - Completed",
-    ]);
-
-    setResult(data);
-    setProgress(100);
+setResult(data);
+setProgress(100);
 
     const endTime = Date.now();
 

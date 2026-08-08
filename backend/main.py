@@ -6,6 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
+
 from agents.memory_agent import store_memory, retrieve_memory
 from agents.narrative_agent import generate_narrative
 from agents.critic_agent import run_critic

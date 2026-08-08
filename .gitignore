@@ -218,4 +218,5 @@ __marimo__/
 .streamlit/secrets.toml
 # ARIA generated files
 memory.json
+
 reports/
