@@ -57,6 +57,25 @@ Instead of manually exploring datasets, selecting machine learning models, gener
 
 *ARIA's web interface showing automated multi-agent dataset analysis.*
 
+## 🧠 What ARIA Does
+
+ARIA automates the core stages of a data science workflow through specialized AI agents.
+
+**1. 📊 Understands Data**  
+Examines dataset structure, dimensions, data types, and potential data-quality issues.
+
+**2. 🤖 Performs Analysis**  
+Automatically performs machine learning analysis and evaluates suitable models.
+
+**3. 🔍 Explains Results**  
+Uses explainability techniques such as SHAP to identify influential features.
+
+**4. 🛡️ Critically Evaluates Results**  
+Checks the analysis for potential risks, limitations, and reliability concerns.
+
+**5. 📝 Generates Reports**  
+Converts the analysis into understandable insights, recommendations, visualizations, and reports.
+
 ## ✨ Key Features
 
 - 📊 Automated dataset understanding
