@@ -1,6 +1,13 @@
 # 🤖 ARIA — Autonomous Research & Intelligence Agent
 
 > An autonomous multi-agent AI platform that transforms raw datasets into machine learning insights, explainable results, critical evaluation, and executive-ready reports.
+>
+> ## 🚀 Live Demo
+
+👉 **[Try ARIA Live](https://aria-agent-seven.vercel.app/)**
+
+> Explore the deployed ARIA interface and view the automated data-analysis workflow.
+
 
 ![ARIA](https://img.shields.io/badge/ARIA-Autonomous%20AI-blue)
 ![Python](https://img.shields.io/badge/Python-3.10+-yellow)
