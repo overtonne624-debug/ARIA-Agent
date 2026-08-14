@@ -162,6 +162,34 @@ Additional research and memory components support the overall workflow.
 - Render
 - Git
 
+## 📁 Project Structure
+
+```text
+ARIA-Agent/
+│
+├── agents/ # Specialized AI agents
+│ ├── data_agent.py
+│ ├── analysis_agent.py
+│ ├── explainability_agent.py
+│ ├── critic_agent.py
+│ ├── narrative_agent.py
+│ └── memory_agent.py
+│
+├── backend/ # FastAPI backend
+│
+├── frontend/ # React + Vite frontend
+│
+├── datasets/ # Sample datasets
+│
+├── tools/ # Supporting utilities
+│
+├── reports/ # Generated reports and visualizations
+│
+├── requirements.txt # Python dependencies
+├── runtime.txt # Runtime configuration
+├── LICENSE
+└── README.md
+
 ## 🔄 How ARIA Works
 
 ```text
