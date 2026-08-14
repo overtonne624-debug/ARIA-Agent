@@ -21,6 +21,12 @@ Instead of manually exploring datasets, selecting machine learning models, gener
 
 ---
 
+## 🖥️ ARIA in Action
+
+![ARIA Dashboard](46147.png)
+
+*ARIA's web interface showing automated multi-agent dataset analysis.*
+
 ## ✨ Key Features
 
 - 📊 Automated dataset understanding
