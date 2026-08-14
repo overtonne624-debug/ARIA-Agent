@@ -108,6 +108,42 @@ Additional research and memory components support the overall workflow.
 
 ---
 
+## 🛠️ Technology Stack
+
+### Frontend
+- React
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+
+### Data Science & Machine Learning
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- SHAP
+- Matplotlib
+
+### AI Architecture
+- Multi-Agent Architecture
+- Data Agent
+- Analysis Agent
+- Explainability Agent
+- Critic Agent
+- Report Agent
+- Memory Agent
+
+### Deployment & Development
+- GitHub
+- Vercel
+- Render
+- Git
+
 ## 🔄 How ARIA Works
 
 ```text
