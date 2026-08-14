@@ -50,7 +50,8 @@ const handleAnalyze = async () => {
     console.log("Uploading dataset...");
 
     const response = await fetch(
-      "https://aria-agent-5jnn.onrender.com/upload",
+      "/api/upload" ,
+      
       {
         method: "POST",
         body: formData,
