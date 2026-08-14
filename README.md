@@ -54,6 +54,24 @@ Instead of manually exploring datasets, selecting machine learning models, gener
 ### 6. SHAP Details
 ![ARIA SHAP Details](images/06_shap_details.jpg)
 
+## 🔮 Future Improvements
+## 🌐 Designed for Any Dataset
+
+ARIA is designed as a general-purpose data science agent rather than a system tied to a single dataset.
+
+Users can provide different structured datasets, and ARIA's workflow is designed to:
+
+- 📊 Understand the uploaded dataset
+- 🔎 Identify relevant columns and data characteristics
+- 🤖 Determine an appropriate analysis approach
+- 🧮 Evaluate machine learning models
+- 🧠 Generate explainable insights
+- 🛡️ Identify potential risks and limitations
+- 📈 Generate visualizations
+- 📝 Produce an executive-ready report
+
+The screenshots in this repository demonstrate one example analysis workflow; they are **not a limitation on the types of datasets ARIA is designed to handle.**
+
 
 *ARIA's web interface showing automated multi-agent dataset analysis.*
 
