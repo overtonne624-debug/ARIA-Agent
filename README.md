@@ -23,7 +23,24 @@ Instead of manually exploring datasets, selecting machine learning models, gener
 
 ## 🖥️ ARIA in Action
 
-![ARIA Dashboard](46147.png)
+### 1. Analysis Summary
+![ARIA Analysis Summary](images/01_analysis_summary.jpg)
+
+### 2. Results Overview
+![ARIA Results Overview](images/02_result_overview.jpg)
+
+### 3. System Health
+![ARIA System Health](images/03_system_health.jpg)
+
+### 4. Insights & Recommendations
+![ARIA Insights and Recommendations](images/04_insights_recommendations.jpg)
+
+### 5. SHAP Explainability
+![ARIA SHAP Explainability](images/05_shap_explainability.jpg)
+
+### 6. SHAP Details
+![ARIA SHAP Details](images/06_shap_details.jpg)
+
 
 *ARIA's web interface showing automated multi-agent dataset analysis.*
 
