@@ -6,7 +6,9 @@
 
 👉 **[Try ARIA Live](https://aria-agent-seven.vercel.app/)**
 
-> Explore the deployed ARIA interface and view the automated data-analysis workflow.
+> Explore the deployed ARIA interface and project workflow.
+
+> **Demo note:** The screenshots below showcase ARIA's completed analysis workflow using a sample dataset. The live deployment is provided as a project interface demonstration.
 >
 > ## 🎥 Project Demo
 
