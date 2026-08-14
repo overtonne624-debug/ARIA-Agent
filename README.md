@@ -7,6 +7,10 @@
 👉 **[Try ARIA Live](https://aria-agent-seven.vercel.app/)**
 
 > Explore the deployed ARIA interface and view the automated data-analysis workflow.
+>
+> ## 🎥 Project Demo
+
+> 🎬 Demo video coming soon — a complete walkthrough of ARIA's autonomous data-science workflow.
 
 
 ![ARIA](https://img.shields.io/badge/ARIA-Autonomous%20AI-blue)
