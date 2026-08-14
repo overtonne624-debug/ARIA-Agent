@@ -190,6 +190,17 @@ ARIA-Agent/
 ├── LICENSE
 └── README.md
 
+## 👨‍💻 Author
+
+**Ashutosh Raj**
+
+B.Tech — Computer Science & Engineering  
+Specialization: Data Science
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
 ## 🔄 How ARIA Works
 
 ```text
